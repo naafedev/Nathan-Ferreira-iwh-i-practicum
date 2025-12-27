@@ -56,6 +56,7 @@ app.get("/update-cobj", (req, res) => {
 // no Custom Object do HubSpot
 // ------------------------------------------------------------
 app.post("/update-cobj", async (req, res) => {
+    console.log("Dados recebidos do formulário:", req.body);
   // Dados vindos do formulário (***SUBSTITUIR PELAS PROPRIEDADES QUE VOCÊ CRIOU***)
   const nome_do_animal = Array.isArray(req.body.nome_do_animal) ? req.body.nome_do_animal[0] : req.body.nome_do_animal;
   const specie = Array.isArray(req.body.specie) ? req.body.specie[0] : req.body.specie;
