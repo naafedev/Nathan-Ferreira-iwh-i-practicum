@@ -57,7 +57,7 @@ app.get("/update-cobj", (req, res) => {
 // ------------------------------------------------------------
 app.post("/update-cobj", async (req, res) => {
   // Dados vindos do formulário (***SUBSTITUIR PELAS PROPRIEDADES QUE VOCÊ CRIOU***)
-  const name = Array.isArray(req.body.name) ? req.body.name[0] : req.body.name;
+  const name = Array.isArray(req.body.nome_do_animal) ? req.body.nome_do_animal[0] : req.body.nome_do_animal;
   const specie = Array.isArray(req.body.specie) ? req.body.specie[0] : req.body.specie;
   const age = Array.isArray(req.body.age) ? req.body.age[0] : req.body.age;
 
@@ -69,7 +69,7 @@ app.post("/update-cobj", async (req, res) => {
         properties: {
           // Estes nomes DEVEM ser os INTERNAL NAMES
           // das propriedades do Custom Object (***SUBSTITUIR PELO OS QUE VOCÊ CRIOU***)
-          name: name,
+          name: nome_do_animal,
           specie: specie,
           age: age,
         },
@@ -98,7 +98,7 @@ app.get("/", async (req, res) => {
   try {
     // Busca registros do Custom Object (***SUBSTITUIR NO FINAL DA URL PELO OS QUE VOCÊ CRIOU***)
     const response = await axios.get(
-      `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT}?properties=name,specie,age`,
+      `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT}?properties=nome_do_animal,specie,age`,
       {
         headers: {
           Authorization: `Bearer ${HUBSPOT_TOKEN}`,
