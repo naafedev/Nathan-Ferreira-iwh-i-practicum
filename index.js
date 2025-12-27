@@ -57,7 +57,7 @@ app.get("/update-cobj", (req, res) => {
 // ------------------------------------------------------------
 app.post("/update-cobj", async (req, res) => {
   // Dados vindos do formulário (***SUBSTITUIR PELAS PROPRIEDADES QUE VOCÊ CRIOU***)
-  const name = Array.isArray(req.body.nome_do_animal) ? req.body.nome_do_animal[0] : req.body.nome_do_animal;
+  const nome_do_animal = Array.isArray(req.body.nome_do_animal) ? req.body.nome_do_animal[0] : req.body.nome_do_animal;
   const specie = Array.isArray(req.body.specie) ? req.body.specie[0] : req.body.specie;
   const age = Array.isArray(req.body.age) ? req.body.age[0] : req.body.age;
 
