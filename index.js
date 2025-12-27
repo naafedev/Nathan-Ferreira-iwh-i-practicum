@@ -70,7 +70,7 @@ app.post("/update-cobj", async (req, res) => {
         properties: {
           // Estes nomes DEVEM ser os INTERNAL NAMES
           // das propriedades do Custom Object (***SUBSTITUIR PELO OS QUE VOCÊ CRIOU***)
-          name: nome_do_animal,
+          nome_do_animal: nome_do_animal,
           specie: specie,
           age: age,
         },
